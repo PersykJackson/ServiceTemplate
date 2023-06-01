@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "projects": {
+    "http": {
+      "type": "application",
+      "root": ".",
+      "entryFile": "http/main",
+      "sourceRoot": "src",
+      "compilerOptions": {
+        "tsConfigPath": "tsconfig.json"
+      }
+    },
+    "queue": {
+      "type": "application",
+      "root": ".",
+      "entryFile": "queue/main",
+      "sourceRoot": "src",
+      "compilerOptions": {
+        "tsConfigPath": "tsconfig.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "deleteOutDir": false,
+    "webpack": true,
+    "tsConfigPath": "tsconfig.json"
+  }
+}
