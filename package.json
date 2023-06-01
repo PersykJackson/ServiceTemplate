@@ -7,12 +7,13 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "nest build",
+    "build:env": "npx gen-env-types .env.example",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start:http": "nest start http --watch",
     "start:queue": "nest start queue --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
-    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" \"env.d.ts\"",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
@@ -30,13 +31,13 @@
     "jsonwebtoken": "^9.0.0",
     "pg": "^8.11.0",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.2.0"
+    "rxjs": "^7.2.0",
+    "typeorm": "^0.3.16"
   },
   "devDependencies": {
     "@nestjs/cli": "^9.0.0",
     "@nestjs/schematics": "^9.0.0",
     "@nestjs/testing": "^9.0.0",
-    "@nestjs/devtools-integration": "^0.1.4",
     "@types/express": "^4.17.13",
     "@types/jest": "29.5.0",
     "@types/node": "18.15.11",
